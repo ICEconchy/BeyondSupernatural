@@ -247,33 +247,31 @@ public class SNConfigHandler {
 
 	static {
 		materialOpacity.put(Material.AIR, 0D);
-		materialOpacity.put(Material.SAPLING, 0.3D);
-		materialOpacity.put(Material.LEAVES, 0.3D);
+		materialOpacity.put(Material.OAK_SAPLING, 0.3D);
+		materialOpacity.put(Material.OAK_LEAVES, 0.3D);
 		materialOpacity.put(Material.GLASS, 0.5D);
-		materialOpacity.put(Material.YELLOW_FLOWER, 0.1D);
-		materialOpacity.put(Material.RED_ROSE, 0.1D);
+		materialOpacity.put(Material.DANDELION, 0.1D);
+		materialOpacity.put(Material.ROSE_BUSH, 0.1D);
 		materialOpacity.put(Material.BROWN_MUSHROOM, 0.1D);
 		materialOpacity.put(Material.RED_MUSHROOM, 0.1D);
 		materialOpacity.put(Material.TORCH, 0.1D);
 		materialOpacity.put(Material.FIRE, 0D);
-		materialOpacity.put(Material.MOB_SPAWNER, 0.3D);
+		materialOpacity.put(Material.SPAWNER, 0.3D);
 		materialOpacity.put(Material.REDSTONE_WIRE, 0D);
-		materialOpacity.put(Material.CROPS, 0.2D);
-		materialOpacity.put(Material.SIGN, 0.1D);
-		materialOpacity.put(Material.SIGN_POST, 0.2D);
+		materialOpacity.put(Material.WHEAT, 0.2D);
+		materialOpacity.put(Material.OAK_HANGING_SIGN, 0.1D);
+		materialOpacity.put(Material.OAK_SIGN, 0.2D);
 		materialOpacity.put(Material.LEVER, 0.1D);
-		materialOpacity.put(Material.STONE_PLATE, 0D);
-		materialOpacity.put(Material.WOOD_PLATE, 0D);
-		materialOpacity.put(Material.REDSTONE_TORCH_OFF, 0.1D);
-		materialOpacity.put(Material.REDSTONE_TORCH_ON, 0.1D);
+		materialOpacity.put(Material.STONE_PRESSURE_PLATE, 0D);
+		materialOpacity.put(Material.OAK_PRESSURE_PLATE, 0D);
+		materialOpacity.put(Material.REDSTONE_TORCH, 0.1D);
 		materialOpacity.put(Material.STONE_BUTTON, 0D);
-		materialOpacity.put(Material.SUGAR_CANE_BLOCK, 0.3D);
-		materialOpacity.put(Material.FENCE, 0.2D);
-		materialOpacity.put(Material.DIODE_BLOCK_OFF, 0D);
-		materialOpacity.put(Material.DIODE_BLOCK_ON, 0D);
+		materialOpacity.put(Material.SUGAR_CANE, 0.3D);
+		materialOpacity.put(Material.OAK_FENCE, 0.2D);
+		materialOpacity.put(Material.REPEATER, 0D);
 
 		transparent.add((byte) Material.WATER.getId());
-		transparent.add((byte) Material.STATIONARY_WATER.getId());
+		transparent.add((byte) Material.WATER.getId());
 		transparent.add((byte) Material.AIR.getId());
 	}
 

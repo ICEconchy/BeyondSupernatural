@@ -19,7 +19,10 @@
 
 package me.matterz.supernaturals;
 
-import static com.sk89q.worldguard.bukkit.BukkitUtil.toVector;
+import com.sk89q.worldedit.bukkit.BukkitAdapter;
+import com.sk89q.worldedit.math.Vector2;
+import com.sk89q.worldedit.math.Vector3;
+import org.bukkit.Location;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -78,11 +81,11 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.sk89q.worldedit.Vector;
 import com.sk89q.worldguard.bukkit.WorldGuardPlugin;
 import com.sk89q.worldguard.protection.ApplicableRegionSet;
 import com.sk89q.worldguard.protection.flags.DefaultFlag;
 import com.sk89q.worldguard.protection.managers.RegionManager;
+import org.bukkit.util.Vector;
 
 public class SupernaturalsPlugin extends JavaPlugin {
 	public static SupernaturalsPlugin instance;
@@ -407,11 +410,13 @@ public class SupernaturalsPlugin extends JavaPlugin {
 		if (worldGuard == null) {
 			return true;
 		}
-		Vector pt = toVector(player.getLocation());
+
+		Vector3 pt = BukkitAdapter.asVector(player.getLocation());
 		RegionManager regionManager = worldGuard.getRegionManager(player.getWorld());
 		ApplicableRegionSet set = regionManager.getApplicableRegions(pt);
 		return set.allows(DefaultFlag.PVP);
 	}
+}
 
 	public boolean getSpawn(Player player) {
 		WorldGuardPlugin worldGuard = SupernaturalsPlugin.instance.getWorldGuard();
